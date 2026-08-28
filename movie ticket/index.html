@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticket Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Movie Ticket Booking System</h1>
+  </header>
+
+  <!-- Movie details section -->
+  <section class="movie-section">
+    <div class="poster">🎬</div>
+    <div class="movie-info">
+      <h2 id="movie-title">Avengers: Endgame</h2>
+      <p id="ticket-price">Ticket Price: ₹150</p>
+    </div>
+  </section>
+
+  <!-- Show time selection -->
+  <section class="showtime-section">
+    <h3>Select Show Time</h3>
+    <div class="showtime-buttons">
+      <button class="showtime-btn" data-time="10:00 AM">10:00 AM</button>
+      <button class="showtime-btn" data-time="2:00 PM">2:00 PM</button>
+      <button class="showtime-btn" data-time="6:00 PM">6:00 PM</button>
+    </div>
+  </section>
+
+  <!-- Seat selection section -->
+  <section class="seat-section">
+    <h3>Select Seats</h3>
+    <div class="screen">SCREEN THIS WAY</div>
+
+    <div class="seat-row">
+      <button class="seat" id="A1">A1</button>
+      <button class="seat" id="A2">A2</button>
+      <button class="seat" id="A3">A3</button>
+      <button class="seat" id="A4">A4</button>
+    </div>
+
+    <div class="seat-row">
+      <button class="seat" id="B1">B1</button>
+      <button class="seat booked" id="B2" disabled>B2</button>
+      <button class="seat" id="B3">B3</button>
+      <button class="seat" id="B4">B4</button>
+    </div>
+
+    <div class="seat-row">
+      <button class="seat" id="C1">C1</button>
+      <button class="seat" id="C2">C2</button>
+      <button class="seat booked" id="C3" disabled>C3</button>
+      <button class="seat" id="C4">C4</button>
+    </div>
+
+    <div class="seat-row">
+      <button class="seat" id="D1">D1</button>
+      <button class="seat" id="D2">D2</button>
+      <button class="seat" id="D3">D3</button>
+      <button class="seat" id="D4">D4</button>
+    </div>
+
+    <div class="seat-legend">
+      <span><span class="legend-box available"></span> Available</span>
+      <span><span class="legend-box selected"></span> Selected</span>
+      <span><span class="legend-box booked"></span> Booked</span>
+    </div>
+  </section>
+
+  <!-- Booking summary section -->
+  <section class="summary-section">
+    <p>Selected Seats: <span id="selected-count">0</span></p>
+    <p>Total: ₹<span id="total-price">0</span></p>
+    <button id="book-btn">Book Ticket</button>
+    <p id="confirmation-message"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
